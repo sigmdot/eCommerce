@@ -1,0 +1,23 @@
+.product{
+  width: 500px;
+  height: 250px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+}
+.product .image-section{
+  border-right: 1px solid black;
+  width: 50%;
+}
+.product .image-section img{
+  height:250px;
+  width: 100%;
+}
+.product .text-section{
+  padding: 5px;
+  width: 50%;
+}
+.product .text-section .titleDesc{
+  text-align: center;
+  height: ;
+}
