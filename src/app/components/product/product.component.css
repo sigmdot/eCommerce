@@ -1,23 +1,65 @@
-.product{
+.product {
   width: 500px;
   height: 250px;
   border: 1px solid black;
   display: flex;
   flex-direction: row;
+  border-radius: 10px;
+  overflow: hidden;
 }
-.product .image-section{
+.myoverflow {
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+.product .image-section {
   border-right: 1px solid black;
   width: 50%;
 }
-.product .image-section img{
-  height:250px;
+.product .image-section img {
+  height: 250px;
   width: 100%;
 }
-.product .text-section{
+.product .text-section {
   padding: 5px;
   width: 50%;
 }
-.product .text-section .titleDesc{
+.product .text-section .titleDesc {
+  height: 190px;
+}
+.product .text-section .titleDesc h1 {
   text-align: center;
-  height: ;
+  margin-bottom: 5px;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+.product .text-section .titleDesc p {
+  margin-bottom: 0;
+  text-align: justify;
+}
+.product .text-section .titleDesc span{
+  text-align: left;
+  font-size: 0.8em;
+  color: gray;
+}
+.product .text-section .buttonPrice {
+  height: 50px;
+  background-color: red;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.product .text-section .buttonPrice button{
+  margin-left: auto;
+}
+.product .text-section .buttonPrice span{
+  font-size: 2em;
+  line-height: 200%;
 }
