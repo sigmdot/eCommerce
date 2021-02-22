@@ -1,38 +1,48 @@
-.product {
-  width: 500px;
-  height: 250px;
-  border: 1px solid black;
+.product{
+  width: 100%;
+  height: max-content;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin:0;
+  background-color: white;
+}
+:host{
+  display: block;
+}
+
+.product .iconHeart{
+  height: 30px;
   display: flex;
-  flex-direction: row;
-  border-radius: 10px;
-  overflow: hidden;
+  align-items: center;
+  justify-content: left;
 }
-.myoverflow {
-  -webkit-box-orient: vertical;
-  display: -webkit-box;
-  -webkit-line-clamp: 5;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: normal;
+
+.product .iconHeart #heart{
+  margin-left: auto;
 }
-.product .image-section {
-  border-right: 1px solid black;
-  width: 50%;
+.product .image-section{
+  height: 200px;
 }
-.product .image-section img {
-  height: 250px;
+.product .image-section img{
+  height: 200px;
   width: 100%;
 }
-.product .text-section {
-  padding: 5px;
-  width: 50%;
+.product .text-section{
+  height: 76px;
+  text-align: left;
 }
-.product .text-section .titleDesc {
-  height: 190px;
+.product .text-section .titleStar{
+  height: 46px;
 }
-.product .text-section .titleDesc h1 {
-  text-align: center;
-  margin-bottom: 5px;
+.product .text-section .startCant{
+  height: 30px;
+}
+.product .text-section .titleStar h5{
+  font-size: 0.875rem;
+  margin-bottom: 0;
+  font-weight: bolder;
   -webkit-box-orient: vertical;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -40,26 +50,50 @@
   text-overflow: ellipsis;
   white-space: normal;
 }
-.product .text-section .titleDesc p {
-  margin-bottom: 0;
-  text-align: justify;
-}
-.product .text-section .titleDesc span{
-  text-align: left;
-  font-size: 0.8em;
-  color: gray;
-}
-.product .text-section .buttonPrice {
-  height: 50px;
-  background-color: red;
+.product .buttonPrice{
   display: flex;
-  flex-direction: row;
-  width: 100%;
+  flex-direction: column;
 }
-.product .text-section .buttonPrice button{
-  margin-left: auto;
-}
-.product .text-section .buttonPrice span{
-  font-size: 2em;
+.product .buttonPrice #productPrice{
   line-height: 200%;
+  font-size: 1.25rem;
 }
+.product .buttonPrice span{
+  line-height: 200%;
+  font-size: 0.75rem;
+}
+.product .buttonPrice button{
+  height: 38px;
+  margin-left: auto;
+  border: 0;
+  background: transparent;
+  display: flex;
+  line-height: 290%;
+  padding-right: 35px;
+}
+.rowStarts {
+  height: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.rowStarts span{
+  margin-left: 10px;
+}
+.product>button{
+  height: 40px;
+  padding-right: 15px;
+  padding-left: 15px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+.product>button .iconButton{
+  margin-right: auto;
+}
+/* .product>button span{
+  margin-left: auto;
+} */
