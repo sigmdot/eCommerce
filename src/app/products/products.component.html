@@ -1,0 +1,8 @@
+<div class="product-row">
+  <app-product
+    class="product"
+    *ngFor="let product of products"
+    (idEmitter)="atraparId($event)"
+    [product]="product"
+  ></app-product>
+</div>

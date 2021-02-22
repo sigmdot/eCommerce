@@ -1,0 +1,32 @@
+
+<input type="text" [(ngModel)]="title" />
+{{ title }}
+
+
+<div *ngIf="title === 'nicolas'">
+  este es un div que no se llama nicolás, me llamo {{ title }}
+</div>
+
+<div *ngIf="title === 'julian'">
+  este es un div que no se llama nicolás, me llamo {{ title }}
+</div>
+
+<div *ngIf="title === 'seba'">
+  este es un div que no se llama nicolás, me llamo {{ title }}
+</div>
+
+<div [ngSwitch]="title">
+    <p *ngSwitchCase="'julian'">Julian</p>
+    <p *ngSwitchCase="'nicolas'">Nicolas</p>
+    <p *ngSwitchCase="'sebastian'">Sebastian</p>
+    <p *ngSwitchDefault>No hay match</p>
+</div>
+
+<button (click)="agregarItem()">Agregar item</button>
+
+<ul>
+  <li *ngIf="items.length === 0">Esta vacia la lista</li>
+  <li *ngFor="let fruits of items; index as i">
+    {{ fruits + i }} <button (click)="deleteItem(i)">Borrar</button>
+  </li>
+</ul>
