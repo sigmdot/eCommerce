@@ -7,45 +7,45 @@ import { LayoutComponent } from './layout/layout.component';
 import { ProductDetailsComponent } from './products/views/product-details/product-details.component';
 import { ProductsComponent } from './products/products.component';
 
-import {AdminGuardGuard} from './core/guards/AdminGuard/admin-guard.guard'
+import {AdminGuardGuard} from './core/guards/AdminGuard/admin-guard.guard';
 
 const routes: Routes = [
   {
-    path:'',
+    path: '',
     component: LayoutComponent,
-    children:[
+    children: [
       {
-        path:'',
-        redirectTo:'home',
-        pathMatch:'full'
+        path: '',
+        redirectTo: 'home',
+        pathMatch: 'full'
       },
       {
-        path:'home',
+        path: 'home',
         loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
       },
       {
-        path:'products',
+        path: 'products',
         loadChildren: () => import('./products/products.module').then(m => m.ProductsModule)
       },
       {
-        path:'contacts',
-        canActivate:[AdminGuardGuard],
+        path: 'contacts',
+        canActivate: [AdminGuardGuard],
         loadChildren: () => import('./contacts/contacts.module').then(m => m.ContactsModule)
       },
       {
-        path:'demo',
+        path: 'demo',
         loadChildren: () => import('./demo/demo.module').then(m => m.DemoModule)
       }
     ]
   },
   {
-    path:'**',
+    path: '**',
     component: Error404Component
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes,{
+  imports: [RouterModule.forRoot(routes, {
     preloadingStrategy: PreloadAllModules
   })],
   exports: [RouterModule]
