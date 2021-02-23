@@ -33,5 +33,6 @@
     <span>1 unidad</span>
     <span id="productPrice">{{product.price | currency: 'CLP':'$'}}</span>
   </div>
+  <button id="infoButton" [routerLink]="['/products',product.id]" class="btn btn-outline-secondary"> <fa-icon class="iconButton" [icon]="faScroll"></fa-icon> <span>Ver información</span></button>
   <button (click)="agregarCarrito()" class="btn btn-outline-primary"> <fa-icon class="iconButton" [icon]="faShoppingCart"></fa-icon> <span>Agregar al carro</span></button>
 </div>

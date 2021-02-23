@@ -1,13 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { Product } from '../shared/models/product.model';
+import { Injectable } from '@angular/core';
+import { Product } from './shared/models/product.model';
 
-@Component({
-  selector: 'app-products',
-  templateUrl: './products.component.html',
-  styleUrls: ['./products.component.css'],
+@Injectable({
+  providedIn: 'root'
 })
-export class ProductsComponent implements OnInit {
-  products: Product[] = [
+export class ProductsService {
+
+  private products: Product[] = [
     {
       id: '1',
       image: 'assets/images/camiseta.png',
@@ -57,12 +56,14 @@ export class ProductsComponent implements OnInit {
       note: 4,
     },
   ];
-  constructor() {}
 
-  ngOnInit(): void {}
-  
-
-  atraparId(id:string){
-    console.log('Atrapado el id',id);
+  getAllproducts(){
+    return this.products;
   }
+
+  getProduct(id: string){
+    return this.products.find(item => id === item.id);
+  }
+
+  constructor() { }
 }

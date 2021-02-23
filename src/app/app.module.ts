@@ -13,21 +13,24 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { DemoComponent } from './demo/demo.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { BannerComponent } from './banner/banner.component';
 import { CarrosuelComponent } from './components/carrosuel/carrosuel.component';
+import { Error404Component } from './error404/error404.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
+import { LayoutComponent } from './layout/layout.component';
+import { HomeModule } from './home/home.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
-    HomeComponent,
     ProductsComponent,
     ContactsComponent,
     DemoComponent,
     HeaderComponent,
     FooterComponent,
-    BannerComponent,
-    CarrosuelComponent
+    Error404Component,
+    ProductDetailsComponent,
+    LayoutComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,7 @@ import { CarrosuelComponent } from './components/carrosuel/carrosuel.component';
     BrowserAnimationsModule,
     FormsModule,
     FontAwesomeModule
-  ],
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -80,7 +80,7 @@
 .rowStarts span{
   margin-left: 10px;
 }
-.product>button{
+.product button{
   height: 40px;
   padding-right: 15px;
   padding-left: 15px;
@@ -91,7 +91,10 @@
   width: 100%;
   text-align: center;
 }
-.product>button .iconButton{
+#infoButton{
+  margin-bottom: 5px;
+}
+.product button .iconButton{
   margin-right: auto;
 }
 /* .product>button span{

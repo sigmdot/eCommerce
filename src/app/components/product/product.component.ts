@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, Output,EventEmitter } from '@angular/core';
 import { Product } from 'src/app/shared/models/product.model';
-import {faShoppingCart,faStar, faHeart, faStarHalfAlt} from '@fortawesome/free-solid-svg-icons'
+import {faShoppingCart,faStar, faHeart, faScroll} from '@fortawesome/free-solid-svg-icons'
 import {faStar as faStarEmpty} from '@fortawesome/free-regular-svg-icons';
 @Component({
   selector: 'app-product',
@@ -14,6 +14,7 @@ export class ProductComponent implements OnInit {
   faStar = faStar;
   faHeart = faHeart;
   faStarEmpty = faStarEmpty;
+  faScroll= faScroll;
   constructor() { }
 
   ngOnInit(): void {
