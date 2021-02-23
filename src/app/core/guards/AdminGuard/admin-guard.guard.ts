@@ -19,6 +19,6 @@ export class AdminGuardGuard implements CanActivate {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
-    return false;
+    return true;
   }
 }

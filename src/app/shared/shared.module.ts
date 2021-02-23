@@ -4,7 +4,9 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CarrosuelComponent } from './components/carrosuel/carrosuel.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -17,11 +19,15 @@ import { RouterModule } from '@angular/router';
   exports:[
     HeaderComponent,
     FooterComponent,
-    CarrosuelComponent
+    CarrosuelComponent,
+    FormsModule,
+    FontAwesomeModule
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    FontAwesomeModule,
+    FormsModule,
   ]
 })
 export class SharedModule { }

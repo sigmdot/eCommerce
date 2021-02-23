@@ -25,22 +25,18 @@ const routes: Routes = [
       },
       {
         path:'products',
-        component: ProductsComponent
-      },
-      {
-        path:'products/:id',
-        component: ProductDetailsComponent
+        loadChildren: () => import('./products/products.module').then(m => m.ProductsModule)
       },
       {
         path:'contacts',
         canActivate:[AdminGuardGuard],
-        component: ContactsComponent
+        loadChildren: () => import('./contacts/contacts.module').then(m => m.ContactsModule)
+      },
+      {
+        path:'demo',
+        loadChildren: () => import('./demo/demo.module').then(m => m.DemoModule)
       }
     ]
-  },
-  {
-    path:'demo',
-    component: DemoComponent
   },
   {
     path:'**',
