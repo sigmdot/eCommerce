@@ -1,11 +1,10 @@
 import { Injectable } from '@angular/core';
-import { Product } from './shared/models/product.model';
+import { Product } from '../../../shared/models/product.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ProductsService {
-
   private products: Product[] = [
     {
       id: '1',
@@ -57,13 +56,13 @@ export class ProductsService {
     },
   ];
 
-  getAllproducts(){
+  getAllproducts() {
     return this.products;
   }
 
-  getProduct(id: string){
-    return this.products.find(item => id === item.id);
+  getProduct(id: string) {
+    return this.products.find((item) => id === item.id);
   }
 
-  constructor() { }
+  constructor() {}
 }
