@@ -4,8 +4,10 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { DemoComponent } from './demo/demo.component';
 import { Error404Component } from './error404/error404.component';
 import { LayoutComponent } from './layout/layout.component';
-import { ProductDetailsComponent } from './product-details/product-details.component';
+import { ProductDetailsComponent } from './products/views/product-details/product-details.component';
 import { ProductsComponent } from './products/products.component';
+
+import {AdminGuardGuard} from './core/guards/AdminGuard/admin-guard.guard'
 
 const routes: Routes = [
   {
@@ -31,6 +33,7 @@ const routes: Routes = [
       },
       {
         path:'contacts',
+        canActivate:[AdminGuardGuard],
         component: ContactsComponent
       }
     ]
